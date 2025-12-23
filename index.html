@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yasan Ding | Homepage</title>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ====== Global Style ====== */
+:root{
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #4b5563;
+    --primary: #2563eb;
+    --primary-soft: #e3edff;
+    --border: #e5e7eb;
+}
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at 20% 20%, #f1f5ff 0, #f7f9fc 35%, #f7f9fc 100%);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+a{ color:var(--primary); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+p, li{ color: var(--muted); }
+
+/* ====== Layout ====== */
+.container{
+    max-width: 980px;
+    margin: 0 auto 60px;
+    padding: 28px 24px 40px;
+}
+
+/* ====== Header / Nav ====== */
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 26px;
+    padding: 18px 0 8px;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.site-brand{
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+}
+.site-brand img{
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+}
+@media(max-width:700px){
+    .site-brand img{ height: 52px; }
+}
+.site-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin: 6px 0 0;
+}
+.nav-wrap{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+nav{
+    display: flex;
+    gap: 12px;
+}
+nav a{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: background .2s ease, color .2s ease, transform .15s ease;
+}
+nav a:hover{
+    background: var(--primary-soft);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Mobile menu */
+.menu-toggle{
+    display:none;
+    font-size: 24px;
+    cursor:pointer;
+}
+@media(max-width:700px){
+    nav{
+        display:none;
+        flex-direction: column;
+        width:100%;
+        margin-top:10px;
+    }
+    nav.active{
+        display:flex;
+    }
+    .menu-toggle{
+        display:block;
+    }
+}
+
+/* ====== Sections ====== */
+section{
+    margin-bottom: 32px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+section::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(37,99,235,0.18), rgba(124,58,237,0.18));
+}
+.section-title{
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text);
+}
+
+/* ====== Profile ====== */
+.profile{
+    display:flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    align-items:center;
+}
+.profile img{
+    width:160px;
+    height:160px;
+    object-fit:cover;
+    border-radius:18px;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+.profile-info{
+    max-width: 640px;
+}
+.profile-info p{
+    margin: 6px 0;
+    color: var(--muted);
+}
+.bio{
+    background: #f8fbff;
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    border-radius: 14px;
+}
+
+/* ====== Social Icons ====== */
+.social a{
+    margin-right:12px;
+    font-size:20px;
+    color: var(--text);
+    background: var(--primary-soft);
+    padding: 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+}
+.social a:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.18);
+    text-decoration: none;
+    background: #d7e5ff;
+}
+
+/* ====== List Design ====== */
+.paper-list li{
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+.tag{
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+.muted{ color: var(--muted); }
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    padding-left: 0;
+    list-style: none;
+}
+.card-list li{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+}
+.paper-list{
+    padding-left: 18px;
+}
+.paper-list b{ color: var(--text); }
+.contact-card{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #f8fbff;
+}
+.contact-inline{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    align-items: center;
+}
+.contact-inline span{
+    display: inline-flex;
+    align-items: center;
+}
+.contact-inline span:not(:last-child)::after{
+    content: "·";
+    margin-left: 12px;
+    color: var(--muted);
+}
+.contact-email{
+    flex-basis: 100%;
+    margin-top: 4px;
+}
+</style>
+
+<script>
+function toggleMenu(){
+    document.querySelector("nav").classList.toggle("active");
+}
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+<!-- ====== Header ====== -->
+<header>
+    <div class="header-top">
+        <div class="site-brand">
+            <img src="./logo2.png" alt="NPU Logo">
+        </div>
+        <div class="nav-wrap">
+            <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="publications.html">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+    <div class="site-title">Yasan Ding</div>
+</header>
+
+
+<!-- ====== About Section ====== -->
+<section id="about">
+    <div class="profile">
+        <img src="Attached_image.png" alt="Yasan Ding">
+        <div class="profile-info">
+            <p><b>Postdoctoral Researcher</b><br>
+            School of Computer Science<br>
+            Northwestern Polytechnical University</p>
+
+            <div class="social">
+                <a href="mailto:yasanding@nwpu.edu.cn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=eohlTTcAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                <a href="https://orcid.org/0000-0001-9051-5865" target="_blank" title="ORCID"><i class="ai ai-orcid"></i></a>
+                <a href="https://github.com/yasanding" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <p class="bio">
+        Yasan Ding is a postdoctoral researcher at the School of Computer Science, Northwestern Polytechnical University, P.R.China. 
+        He has conducted research in human-machine-thing crowd intelligence computing (CrowdHMT), social media data mining, and knowledge transfer. 
+        He earned his Bachelor's degree in Engineering in 2018 and his Ph.D. in Engineering in 2024 from Northwestern Polytechnical University, specializing in Internet of Things Engineering and Computer Science and Technology, respectively. 
+        In recent years, he has published over ten academic papers in high-level journals and conferences such as ACM CSUR, ACM TIST, ACM Ubicomp, IEEE COMST, and IEEE TMC. 
+        He holds three authorized invention patents. He received the ACM Xi'an Chapter Excellent Doctoral Dissertation Award in 2025 and the PCC 2024 Best Paper Award. 
+        He has led projects funded by the National Natural Science Foundation of China Youth Science Fund and the China Postdoctoral General Project, and participated in a key project of the National Natural Science Foundation of China. 
+        He serves as the Session Chair for IEEE UIC '24 and as a reviewer for several international journals and conferences, including IEEE THMS, EAAI, and IP&M. He is a member of the CCF Committee on Ubiquitous Computing.
+    </p>
+    
+</section>
+
+
+<!-- ====== Research Interests ====== -->
+<section id="research">
+    <div class="section-title">Research Interests</div>
+    <ul class="card-list">
+        <li><span class="tag">AIoT</span> Artificial Internet of Things</li>
+        <li><span class="tag">Embodied</span> Embodied AI</li>
+        <li><span class="tag">Social</span> Social Data Mining</li>
+        <li><span class="tag">Integrity</span> Fake News Detection</li>
+    </ul>
+</section>
+
+
+<!-- ====== Publications ====== -->
+<section id="publications">
+    <div class="section-title">Selected Five Publications</div>
+
+    <ul class="paper-list">
+        <li><b>EvolveDetector: Towards an Evolving Fake News Detector for Emerging Events with Continual Knowledge Accumulation and Transfer</b><br>
+           Yasan Ding, Bin Guo, Yan Liu, Yao Jing, Maolong Yin, Nuo Li, Hao Wang, Zhiwen Yu. <i>Information Processing & Management</i>, 2025, 62(1): 103878.</li>
+
+        <li><b>MetaDetector: Meta Event Knowledge Transfer for Fake News Detection</b><br>
+        Yasan Ding, Bin Guo, Yan Liu, Yunji Liang, Haocheng Shen, Zhiwen Yu. <i>ACM Transactions on Intelligent Systems and Technology</i>, 2022, 13(6): 1-25.</li>
+
+        <li><b>The Future of False Information Detection on Social Media: New Perspectives and Trends</b><br>
+        Bin Guo, Yansan Ding, Lina Yao, Yunji Liang, Zhiwen Yu. <i>ACM Computing Surveys</i>, 2020, 53(4): 1-36.</li>
+
+        <li><b>UbiHR: Resource-efficient Long-range Heart Rate Sensing on Ubiquitous Devices</b><br>
+        Haoyu Bian, Bin Guo, Sicong Liu, Yasan Ding, Shanshan Gao, Zhiwen Yu. <i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</i>, 2024, 8(4): 1-26.</li>
+        
+        <li><b>CrowdTransfer: Enabling Crowd Knowledge Transfer in AIoT Community</b><br>
+        Yan Liu, Bin Guo, Nuo Li, Yasan Ding, Zhouyangzi Zhang, Zhiwen Yu. <i>IEEE Communications Surveys and Tutorials</i>, 2024, 27(2): 1191-1237.</li>
+
+        
+    </ul>
+</section>
+
+
+<!-- ====== Projects ====== -->
+<section id="projects">
+    <div class="section-title">Projects</div>
+    <ul class="card-list">
+        <li>
+            <b>国家自然科学基金青年科学基金</b><br>
+            <span class="muted">Principal Investigator</span>
+        </li>
+        <li>
+            <b>中国博士后面上项目</b><br>
+            <span class="muted">Principal Investigator</span>
+        </li>
+    </ul>
+</section>
+
+
+<!-- ====== Contact ====== -->
+<section id="contact">
+    <div class="section-title">Contact</div>
+    <div class="contact-card">
+        <div class="contact-inline">
+            <span>School of Computer Science</span>
+            <span>Northwestern Polytechnical University</span>
+            <span>1 Dongxiang Road, Chang'an District</span>
+            <span>Xi'an, Shaanxi, China</span>
+            <span class="contact-email"><b>Email</b>: yasanding@nwpu.edu.cn</span>
+        </div>
+    </div>
+</section>
+
+</div>
+</body>
+</html>

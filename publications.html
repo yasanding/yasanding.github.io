@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yasan Ding | Publications</title>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #4b5563;
+    --primary: #2563eb;
+    --primary-soft: #e3edff;
+    --border: #e5e7eb;
+}
+*{ box-sizing: border-box; }
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at 20% 20%, #f1f5ff 0, #f7f9fc 35%, #f7f9fc 100%);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+a{ color: var(--primary); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{
+    max-width: 980px;
+    margin: 0 auto 60px;
+    padding: 28px 24px 48px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 26px;
+    padding: 18px 0 8px;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.site-brand{
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+}
+.site-brand img{
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+}
+@media(max-width:700px){
+    .site-brand img{ height: 52px; }
+}
+.site-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin: 6px 0 0;
+}
+.nav-wrap{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+nav{
+    display: flex;
+    gap: 12px;
+}
+nav a{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: background .2s ease, color .2s ease, transform .15s ease;
+}
+nav a:hover{
+    background: var(--primary-soft);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+.breadcrumb{
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.page-title{
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0 6px;
+}
+.page-desc{
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.year-block{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+}
+.year-title{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: var(--text);
+}
+.pub-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.pub-list li{
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 12px;
+    color: var(--muted);
+}
+.pub-list li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+.pub-title{ color: var(--text); font-weight: 700; }
+.venue{ font-style: italic; color: var(--primary); }
+
+@media(max-width:720px){
+    nav{
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .page-title{ font-size: 24px; }
+    .year-block{ padding: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="header-top">
+            <div class="site-brand">
+                <img src="https://www.nwpu.edu.cn/images/logo2.png" alt="NPU Logo">
+            </div>
+            <div class="nav-wrap">
+                <nav>
+                    <a href="index.html#about">About</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="index.html#projects">Projects</a>
+                    <a href="index.html#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+        <div class="site-title">Yasan Ding</div>
+    </header>
+
+    <div class="breadcrumb">Home / Publications</div>
+    <div class="page-title">Publications</div>
+    <div class="page-desc">Full list by year (layout inspired by guob.org/publication.html).</div>
+
+    <div class="year-block">
+        <div class="year-title">2025 年</div>
+        <ul class="pub-list">
+            <li><span class="pub-title">Hao Wang, Bin Guo, Yating Zeng, Mengqi Chen, Yasan Ding, Ying Zhang, Lina Yao, Zhiwen Yu.</span> "Enabling Harmonious Human-Machine Interaction with Visual-Context Augmented Dialogue System: A Review". <span class="venue">ACM Transactions on Information Systems</span>, 2025.</li>
+            <li><span class="pub-title">Hao Wang, Bin Guo, Mengqi Chen, Qiuyun Zhang, Yasan Ding, Ying Zhang, Zhiwen Yu.</span> "Cascade Context-oriented Spatio-temporal Attention Network for Efficient and Fine-grained Video-grounded Dialogues", <span class="venue">Frontiers of Computer Science</span>, vol. 19, no. 7, 2025, pp. 1-16.</li>
+            <li><span class="pub-title">Mengqi Chen, Bin Guo, Hao Wang, Haoyu Li, Qian Zhao, Jingqi Liu, Yasan Ding, Yan Pan, Zhiwen Yu.</span> "The Future of Cognitive Strategy-enhanced Persuasive Dialogue Agents: New Perspectives and Trends", <span class="venue">Frontiers of Computer Science</span>, vol. 19, no. 5, 2025, pp. 1-28.</li>
+            <li><span class="pub-title">Zhuohan Cai, Bin Guo, Yasan Ding, Zhaotie Hao, Zhiwen Yu.</span> "CogPlanner: A Cognitive Navigation Method for Embodied Intelligence Guided by Indoor Floor Plans", 20th International Conference on Green, Pervasive, and Cloud Computing (<span class="venue">GPC'25</span>), Dec 9-12, 2025, Kuala Lumpur, Malaysia.</li>
+            <li><span class="pub-title">林政, 刘思聪, 郭斌, 丁亚三, 於志文.</span> 面向智能物联网异构嵌入式芯片的自适应算子并行分割方法[J/OL]. <span class="venue">计算机科学</span>, 1-17[2025-01-08].</li>
+        </ul>
+    </div>
+
+    <div class="year-block">
+        <div class="year-title">2024 年</div>
+        <ul class="pub-list">
+            <li><span class="pub-title">Yan Liu, Bin Guo, Nuo Li, Yasan Ding, Zhouyangzi Zhang, Zhiwen Yu.</span> "CrowdTransfer: Enabling Crowd Knowledge Transfer in AIoT Community", <span class="venue">IEEE Communications Surveys and Tutorials</span>, 2024.</li>
+            <li><span class="pub-title">Hao Luo, Sicong Liu, Xiaochen Li, Yao Li, Bin Guo, Zhiwen Yu, Yuzhan Wang, Ke Ma, Yasan Ding, Yuan Yao.</span> "AdaKnife: Flexible DNN Offloading for Inference Acceleration on Heterogeneous Mobile Devices", <span class="venue">IEEE Transactions on Mobile Computing</span>, 2024.</li>
+            <li><span class="pub-title">Nuo Li, Bin Guo, Yan Liu, En Xu, Yasan Ding, Lina Yao, Xiaopeng Fan, Zhiwen Yu.</span> "Hierarchical Constrained Variational Autoencoder for Interaction-Sparse Recommendations", <span class="venue">Information Processing and Management</span>, vol. 61, no. 3, 2024, pp. 1-16.</li>
+            <li><span class="pub-title">Haoyu Bian, Bin Guo, Sicong Liu, Yasan Ding, Shanshan Gao, Zhiwen Yu.</span> "UbiHR: Resource-efficient Long-range Heart Rate Sensing on Ubiquitous Devices", The 2025 ACM International Joint Conference on Pervasive and Ubiquitous Computing (<span class="venue">ACM UbiComp'25</span>), Full Paper, 2024.</li>
+            <li><span class="pub-title">Hao Wang, Bin Guo, Mengqi Chen, Yasan Ding, Qiuyun Zhang, Ying Zhang, Zhiwen Yu.</span> "Memory-enhanced Emotional Support Conversations with Motivation-driven Strategy Inference", European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (<span class="venue">ECML-PKDD'24</span>), Vilnius, Lithuania, 2024.</li>
+            <li><span class="pub-title">Ruonan Xu, Bin Guo, Yasan Ding, Zhiwen Yu.</span> "Robust Control of Quadruped Robots using Reinforcement Learning and Depth Completion network", ACM MobiSys Workshop on Adaptive AIoT Systems (<span class="venue">AdaAIoTSys@MobiSys</span>), Tokyo, Japan, 2024.</li>
+            <li><span class="pub-title">Yating Zeng, Bin Guo, Yao Jing, Hao Wang, Yasan Ding, Yunji Liang, Zhiwen Yu.</span> "Not Just Imitation: Enhancing Role-Playing Through Retrieve Fine-Tuned Collaborative Large Language Model", The 21st IEEE International Conference on Ubiquitous Intelligence and Computing (<span class="venue">IEEE UIC'24</span>), Denarau Island, Fiji, 2024.</li>
+            <li><span class="pub-title">Yasan Ding, Bin Guo, Yan Liu, Yao Jing, Maolong Yin, Nuo Li, Hao Wang, Zhiwen Yu.</span> "EvolveDetector: Towards an Evolving Fake News Detector for Emerging Events with Continual Knowledge Accumulation and Transfer." <span class="venue">Information Processing & Management</span>, 2024, 62(1): 103878.</li>
+            <li><span class="pub-title">郝肇钊, 郭斌, 赵凯星, 吴磊, 丁亚三, 李哲涛, 於志文.</span> 从规则驱动到群智涌现: 多机器人空地协同研究综述[J]. <span class="venue">自动化学报</span>, 2024, 50(10):1877-1905.</li>
+        </ul>
+    </div>
+
+    <div class="year-block">
+        <div class="year-title">2023 年</div>
+        <ul class="pub-list">
+            <li><span class="pub-title">Hao Wang, Bin Guo, Jiaqi Liu, Yasan Ding, Zhiwen Yu.</span> "Towards Informative and Diverse Dialogue Systems over Hierarchical Crowd Intelligence Knowledge Graph", <span class="venue">ACM Transactions on Knowledge Discovery from Data</span>, vol. 17, no. 7, 2023, pp. 1-25.</li>
+            <li><span class="pub-title">Ke Li, Bin Guo, Siyuan Ren, Yasan Ding, Zhiwen Yu.</span> "Multi-Source Selective Transfer Learning for Fake News Detection in New Event", 2023 IEEE International Conference on Big Data (<span class="venue">BigData'23</span>), Sorrento, Italy, 2023.</li>
+            <li><span class="pub-title">Yuyang Fang, Bin Guo, Jiaqi Liu, Kaixing Zhao, Yasan Ding, Na Wang, Zhiwen Yu.</span> "Self-supervised Continual Reinforcement Learning for Domain Adaptation", International Conference on Artificial Intelligence of Things and Systems (<span class="venue">AIoTSys'23</span>), Xi'an, China, 2023.</li>
+            <li><span class="pub-title">Yasan Ding, Bin Guo, Yan Liu, Hao Wang, Haocheng Shen, Zhiwen Yu.</span> "PiercingEye: Identifying Both Faint and Distinct Clues for Explainable Fake News Detection with Progressive Dynamic Graph Mining", The 26th European Conference on Artificial Intelligence (<span class="venue">ECAI'23</span>), Krakow, Poland, 2023.</li>
+            <li><span class="pub-title">Mingzhe Lv, Jiaqi Liu, Bin Guo, Yasan Ding, Yun Zhang, Zhiwen Yu.</span> "Inducing Coordination in Multi-Agent Repeated Game through Hierarchical Gifting Policies", The 2023 IEEE 18th International Conference on Mobile Ad Hoc and Smart Systems (<span class="venue">MASS'23</span>), Toronto, Canada, 2023.</li>
+            <li><span class="pub-title">Haocheng Shen, Bin Guo, Yasan Ding, Jie Xiao, Mingze Lv, Zhiwen Yu.</span> "Fast-DAVAD: Domain Adaptation for Fast Video Anomaly Detection on Resource-Constrained Edge Devices", <span class="venue">IEEE UIC</span>, 2023.</li>
+            <li><span class="pub-title">吴磊, 郭斌, 徐若楠, 刘思聪, 丁亚三, 党朝辉.</span> 泛在计算视觉下的群智模块化机器人[J]. <span class="venue">计算机科学</span>, 2023, 53(11):2107-2151.</li>
+        </ul>
+    </div>
+
+    <div class="year-block">
+        <div class="year-title">2022 年</div>
+        <ul class="pub-list">
+            <li><span class="pub-title">Yasan Ding, Bin Guo, Yan Liu, Yunji Liang, Haocheng Shen, Zhiwen Yu.</span> "MetaDetector: Meta Event Knowledge Transfer for Fake News Detection", <span class="venue">ACM Transactions on Intelligent Systems and Technology</span>, vol. 13, no. 6, 2022, pp. 1-25.</li>
+            <li><span class="pub-title">Yuqi Zhang, Bin Guo, Yasan Ding, Jiaqi Liu, Chen Qiu, Sicong Liu, Zhiwen Yu.</span> "Investigation of the Determinants for Misinformation Correction Effectiveness on Social Media during COVID-19 pandemic", <span class="venue">Information Processing and Management</span>, vol. 59, no. 3, 2022.</li>
+            <li><span class="pub-title">Nuo Li, Bin Guo, Yan Liu, Yasan Ding, En Xu, Lina Yao, Zhiwen Yu.</span> "Transfer How Much: A Fine-Grained Measure of the Knowledge Transferability of User Behavior Sequences in Social Network", The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (<span class="venue">ECML-PKDD'22</span>), 2022.</li>
+            <li><span class="pub-title">Ziqi Wang, Bin Guo, Helei Cui, Yasan Ding, Zhiwen Yu.</span> "Fashion Meets Bot: What Should the Bot Wear?", The 25th IEEE International Conference on Computer Supported Cooperative Work in Design (<span class="venue">IEEE CSCWD'22</span>), 2022.</li>
+        </ul>
+    </div>
+
+    <div class="year-block">
+        <div class="year-title">2021 年</div>
+        <ul class="pub-list">
+            <li><span class="pub-title">Bin Guo, Hao Wang, Yasan Ding, Shaoyang Hao, Yueqi Sun, Zhiwen Yu.</span> "Conditional Text Generation for Harmonious Human-Machine Interaction", <span class="venue">ACM Transactions on Intelligent Systems and Technology</span>, 2021, 12(2):1-50.</li>
+            <li><span class="pub-title">Bin Guo, Yasan Ding, Yueheng Sun, Shuai Ma, Ke Li.</span> "The Mass, Fake News, and Cognition Security", <span class="venue">Frontiers of Computer Science</span>, 2021, 15(3):1-13.</li>
+            <li><span class="pub-title">Haocheng Shen, Bin Guo, Yasan Ding, Zhiwen Yu.</span> "MDN: Meta-transfer Learning Method for Fake News Detection", Computer Supported Cooperative Work and Social Computing: 16th CCF Conference, <span class="venue">ChineseCSCW</span>, 2021.</li>
+            <li><span class="pub-title">郭斌, 张欣韬, 方西杨, 丁亚三, 张磊, 於志文.</span> 计算美学：计算科学驱动的视觉美学度量与生成[J]. <span class="venue">包装工程</span>, 2021,42(22):62-77+102.</li>
+            <li><span class="pub-title">吴广智, 郭斌, 丁亚三, 等.</span> 假消息识知机理研究综述[J]. <span class="venue">计算机科学</span>, 2021,48(06):306-314.</li>
+            <li><span class="pub-title">张玉琪, 郭斌, 丁亚三, 等.</span> 社交网络假消息辟谣作用机理[J]. <span class="venue">浙江大学学报(工学版)</span>, 2021,55(04):615-625.</li>
+        </ul>
+    </div>
+
+    <div class="year-block">
+        <div class="year-title">2020 年及以前</div>
+        <ul class="pub-list">
+            <li><span class="pub-title">Bin Guo, Yasan Ding, Lina Yao, Yunji Liang, Zhiwen Yu.</span> "The Future of False Information Detection on Social Media: New Perspectives and Trends", <span class="venue">ACM Computing Surveys</span>, 2020, 53(4):1-36.</li>
+            <li><span class="pub-title">丁亚三, 郭斌, 辛通, 等.</span> WiCount: 一种基于 WiFi-CSI 的人数识别方法[J]. <span class="venue">计算机学</span>, 2019,46(11):297-303.</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
